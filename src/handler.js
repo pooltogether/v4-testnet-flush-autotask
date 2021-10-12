@@ -19,7 +19,7 @@ const {
 
 
   {
-    console.log(`Flush on rinkeby...`)
+    console.log(`Flushing contract ${prizeFlushRinkeby.address} on rinkeby...`)
     const txData = await prizeFlushRinkeby.populateTransaction.flush()
     const tx = await rinkebyRelayer.sendTransaction({
       data: txData.data,
@@ -31,7 +31,7 @@ const {
   }
 
   {
-    console.log(`Flush on mumbai...`)
+    console.log(`Flushing ${prizeFlushMumbai.address} on mumbai...`)
     const txData = await prizeFlushMumbai.populateTransaction.flush()
     const tx = await mumbaiRelayer.sendTransaction({
       data: txData.data,
